@@ -27,13 +27,6 @@ function handleThemeSwitch() {
 }
 
 function setBodyTheme() {
-  // localStorage.setItem('theme', Theme.LIGHT);
-  // const theme = localStorage.getItem('theme');
-  // theme === Theme.LIGHT
-  //   ? bodyRef.classList.add(Theme.LIGHT)
-  //   : bodyRef.classList.add(Theme.DARK);
-
-  // localStorage.setItem('theme', Theme.LIGHT);
   const theme = localStorage.getItem('theme');
 
   if (!theme) {

@@ -27,12 +27,22 @@ function handleThemeSwitch() {
 }
 
 function setBodyTheme() {
-  const theme = localStorage.getItem('theme');
-  if (theme) {
-    bodyRef.classList.add(theme);
+  // localStorage.setItem('theme', Theme.LIGHT);
+  // const theme = localStorage.getItem('theme');
+  // theme === Theme.LIGHT
+  //   ? bodyRef.classList.add(Theme.LIGHT)
+  //   : bodyRef.classList.add(Theme.DARK);
 
-    if (theme === Theme.DARK) {
-      switchRef.checked = true;
-    }
+  // localStorage.setItem('theme', Theme.LIGHT);
+  const theme = localStorage.getItem('theme');
+
+  if (!theme) {
+    localStorage.setItem('theme', Theme.LIGHT);
+    bodyRef.classList.add(Theme.LIGHT);
+  }
+
+  if (theme === Theme.DARK) {
+    bodyRef.classList.add(Theme.DARK);
+    switchRef.checked = true;
   }
 }

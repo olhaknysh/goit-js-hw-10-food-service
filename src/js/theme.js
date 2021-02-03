@@ -16,9 +16,7 @@ function handleThemeSwitch() {
     bodyRef.classList.add(Theme.DARK);
 
     localStorage.setItem('theme', Theme.DARK);
-  }
-
-  if (currentTheme === Theme.DARK) {
+  } else {
     bodyRef.classList.remove(Theme.DARK);
     bodyRef.classList.add(Theme.LIGHT);
 
@@ -37,5 +35,9 @@ function setBodyTheme() {
   if (theme === Theme.DARK) {
     bodyRef.classList.add(Theme.DARK);
     switchRef.checked = true;
+  }
+
+  if (theme === Theme.LIGHT) {
+    bodyRef.classList.add(Theme.LIGHT);
   }
 }
